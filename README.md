@@ -1,6 +1,6 @@
 # Simple configuration management tool
 
-### Things to know before running tool (PRerequisites)
+### Things to know before running tool (Prerequisites)
 - Tool runs on debian based machines
 - It is required to keep both "main.sh" and "config" file in the same folder.
 - Need to create "/tmp/srv" folder on the machine where tool needs to be run and keep all the files there which needs to be copied , like configuration files etc.
@@ -11,7 +11,7 @@ mkdir -p /tmp/srv
 
 
 ### How to use
-- Toll has two files, the main script with name "main.sh" and configuration file "config" where we define the actions to be performed.
+- Tool has two files, the main script with name "main.sh" and configuration file "config" where we define the actions to be performed.
 - The configuration file has below format
 
 ```
@@ -23,7 +23,7 @@ file:
 
 package:
   name: apache2,php
-  state: absent
+  state: present
 
 service:
   name: apache2
@@ -34,6 +34,8 @@ copy:
   dest: /var/www/html
 
 Mods to use:
+  package
+  service
   copy
   file
 ```
@@ -82,6 +84,6 @@ sh main.sh
 
 ##### Future scope
 - The limitations which are mentioned above can be corrected.
-- The whole tool currently works on the separate server , but can be integrated with some dedicated server which can run this tool remotely.
+- The whole tool currently works on the separate server(localhost) , but can be integrated with some dedicated server which can run this tool remotely on all the peer hosts where configuration needs to be maintained.
 
 
