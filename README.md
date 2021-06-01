@@ -50,7 +50,7 @@ sh main.sh
 
 ### Modules
 
-##### file
+#### file
 - The file module is used to make sure to have specified metadata of file in palce.
 - file module has various parameters.
   - **name** this is *mandatory* filed which should have actual path of the file, you can provide multiple files to be checked using comma separation.
@@ -58,19 +58,19 @@ sh main.sh
   - **group** this is the group of the file to be set.
   - **perms** this is permissions of the file to be set.
 
-##### Package
+#### Package
 - The package module is used to install/uninstall softwares.
 - package module has various parameters
   - **name** this is *mandatory* filed and can have multiple packages to be installed or uninstalled separated by comma.
   - **state** this is field can be either "present" in case we need to install the software or "absent" in case we need to uninstall software. If field kept blank the software will be uninstalled.
 
-  ##### service
+#### service
 - The service module is used to manage services where in we can start,stop,restart the service.
 - service module has various parameters
   - **name** this is *mandatory* filed and can have multiple services define with comma separation.
   - **status** this filed can be "start","stop" or "restart".
 
-  ##### copy
+#### copy
   - The copy module used to copy the files from "/tmp/srv/" folder to the defined destinition.
   - copy module has various parameters
     - **name** this is *mandatory* field, it should have name of file and the file should be present under "/tmp/srv" which needs to be copied.
