@@ -1,0 +1,22 @@
+file:
+  name: /var/www/html/index.php
+  user: root
+  group: root
+  perm: 644
+
+package:
+  name: apache2,php
+  state: present
+
+service:
+  name: apache2
+  status: start
+
+copy:
+  name: index.php
+  dest: /var/www/html
+
+Mods to use:
+  package
+  service
+  copy
